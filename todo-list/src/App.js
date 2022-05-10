@@ -35,7 +35,7 @@ function App () {
         const updatedList = addedTasks.map( (item, index) => {
             if (e === index) {
                 item.status = ! item.status;
-                setAddedTasks(updatedList)
+                setAddedTasks(u)
             }
 
         return item;

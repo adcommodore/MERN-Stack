@@ -1,8 +1,8 @@
 const Joke = require('../models/joke.model');
 
 module.exports.findAll = (req, res) => {
-    Joke.find()
-        .then((allDaUsers) => {res.json({ users: allDaUsers })})
+        Joke.find()
+        .then((allDaUsers) => {res.json({ users: allDaUsers })})
         .catch((err) => {res.json({ message: 'Something went wrong', error: err })});
 }
 

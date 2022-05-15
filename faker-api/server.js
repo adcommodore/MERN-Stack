@@ -27,22 +27,22 @@ const createCompany = () => ({
 app.get("/api/users/new", (req, res) => {
     const newUser = generateUserObj();
     res.json(newUser);
-  });
-  
-  app.get("/api/user/new", (req, res) => {
+});
+
+app.get("/api/user/new", (req, res) => {
     const newUser = createUser();
     res.json(newUser);
-  });
-  
-  app.get("/ap/company/new", (req, res) => {
+});
+
+app.get("/ap/company/new", (req, res) => {
     const newUser = createUser();
     const newCompany = createCompany();
     const responseObject = {
-      user: newUser,
-      company: newCompany,
+        user: newUser,
+        company: newCompany,
     };
     res.json(responseObject);
-  });
-  
-  app.listen(port, () => console.log(`server running on port ${port}`));
+});
+
+app.listen(port, () => console.log(`server running on port ${port}`));
     

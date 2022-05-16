@@ -7,15 +7,13 @@ module.exports.createProduct = (req, res) => {
 };
 
 module.exports.updateProduct = (req, res) => {
-    Product.findAndUpdate({ _id: req.params.id }, req.body,
-        { new: true, runValidators: true }
-    )
+    Product.findAndUpdate(req.body)
         .then(product => {res.json(product)})
         .catch((err) => {res.json(err)});
-    }
+};
 
 module.exports.deleteProduct = (req, res) => {
-    Product.delete({ _id: req.params.id }, req.body)
-        .then(product => res.json(product))
+    Product.delete(req.body)
+        .then(product => res.json(product))
         .catch(err => res.json(err));
 };

@@ -8,9 +8,11 @@ const ProductForm = (props) => {
     const [description, setDescription] = useState("");
     
     const createProduct = (e) => {
+        console.log("hello", e)
+
         e.preventDefault();
     
-        axios.post("http://localhost:8000//api/create", {
+        axios.post("http://localhost:8000/api/create", {
             title, 
             price,
             description
